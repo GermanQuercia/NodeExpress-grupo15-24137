@@ -7,7 +7,12 @@ import cookieParser from 'cookie-parser';
 const app = express()
 const port = process.env.PORT || 3000
 
-app.use(cors());
+const corsOptions = {
+  origin: 'https://nodeexpress-grupo15-24137.onrender.com',  // Permitir solo este dominio
+  optionsSuccessStatus: 200 // Algunos navegadores antiguos (IE11, varios SmartTVs) requieren 204
+};
+
+app.use(cors(corsOptions));
 app.use(bodyParser.urlencoded({ extended: true }));// Middleware para parsear datos URL-encoded
 app.use(bodyParser.json());// Middleware para parsear datos JSON
 app.use(cookieParser());
