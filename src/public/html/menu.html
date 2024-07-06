@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Tenor+Sans&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="../img/menu.png" type="image/x-icon">
+
+    <title>Menú - Inter Comidas</title>
+</head>
+
+<body>
+
+    <div id="inicio-container">
+        <a href="http://localhost:3000/" id="link-al-menu">
+            <div id="menu">INICIO</div>
+        </a>
+    </div>
+
+    <br>
+
+    <div class="solo-fondo"></div>
+    <div class="espaciador"></div>
+
+    <h2>Conocé nuestras opciones gastronómicas...</h2>
+    <!-- <div class="filtros">filtrar por...
+        <button id="bebida" class="boton">&nbsp;Tragos&nbsp;</button>
+        <button id="postre" class="boton">&nbsp;Postres&nbsp;</button>
+        <button id="plato_principal" class="boton">&nbsp;Platos principales&nbsp;</button>
+        <button id="todo" class="boton">&nbsp;Carta completa&nbsp;</button>
+    </div> -->
+    <div style="display: flex; justify-content: center;">
+        <div class="contenedor-form-login form-group form-container" style=" height: fit-content; padding-top: 25px;">
+            <form id="filtroForm" class="form-container filtros">
+
+                <div class="form-group">
+                    <label for="tipo">Categoría de Alimentos:</label>
+                    <select id="tipo" name="tipo" class="form-select">
+                        <option value="todo">Toda la carta</option>
+                        <option value="plato_principal" style="background-color: rgb(9, 255, 0, 0.1);">Plato principal</option>
+                        <option value="postre" style="background-color: rgb(255, 0, 0, 0.1);" >Postres</option>
+                        <option value="bebida" style="background-color: rgb(0, 0, 255, 0.1);">Tragos</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="precioMin">Precio mínimo:</label>
+                    <input type="number" id="precioMin" name="precioMin" min="0" step="1">
+                </div>
+                <div class="form-group">
+                    <label for="precioMax">Precio máximo:</label>
+                    <input type="number" id="precioMax" name="precioMax" min="0" step="1">
+                </div>
+                <div class="form-group">
+                    <label for="orden">Orden de precios:</label>
+                    <select id="orden" name="orden" class="form-select">
+                        <option value=""></option>
+                        <option value="asc">Ascendente</option>
+                        <option value="desc">Descendente</option>
+                    </select>
+                </div>
+
+                <button type="submit" value="Aplicar filtros">Aplicar filtros
+            </form>
+        </div>
+    </div>
+
+    <div id="mostrar-filtros"  class="txt">
+        <!-- aca se van a mostrar los filtros aplicados -->
+    </div>
+
+    <div class="contendor-de-carta">
+        <table>
+            <thead>
+                <tr>
+                    <th>Menú</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los datos serán insertados aquí mediante JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <br><br><br>
+
+    <div class="espaciador"></div>
+
+    <div class="solo-fondo-2"></div>
+
+    <br><br>
+
+    <script src="../js/traerAlMenu.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Tenor+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <link rel="shortcut icon" href="../../img/instrumentos.png" type="image/x-icon">
+
+    <title>Administración - Inter Comidas</title>
+</head>
+
+<body>
+
+    <div id="inicio-container">
+        <a href="http://localhost:3000/" id="link-al-menu">
+            <div id="menu">INICIO</div>
+        </a>
+    </div>
+
+    <br>
+
+    <div class="solo-fondo"></div>
+    <div class="espaciador"></div>
+
+    <div style="display: flex; align-items: center; flex-direction: column;">
+        <h2>Administración</h2>
+
+        <div id="menu-administracion">
+            <button class="botonesAdmin" id="mensajes" onclick="mostrarMensajes()">Mensajes<img src="../../img/email.png"></button>
+            <button class="botonesAdmin" id="reservas"onclick="mostrarReservas()">Reservas<img src="../../img/reservado.png"></button>
+            <button class="botonesAdmin" id="carta-admin" onclick="mostrarCarta()">Carta<img src="../../img/menu2.png"></button>
+            <a class="botonesAdmin" style="height: 114px; " id="cerrar" href="http://localhost:3000/admin/cerrarSesion">Cerrar sesión<img src="../../img/salida.png"></a>
+        </div>
+
+
+    </div>
+    <div style="min-height: 230px;">
+        <table style="padding: 20px 10%;">
+            <thead id="resultado1"></thead>
+            <tbody id="resultado2"></tbody>
+        </table>
+        <div id="resultado3" style="display: none;">
+            <form id="formCarta" style="display: flex; flex-direction: row; padding: 5px 10%; align-items: center; background-color: rgb(255, 255, 255, 0.3);">
+                <div class="grupoFormAdmin1">
+                    <label for="nombre" style="color:rgb(194, 6, 6)">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" style="height: 100px;  border: 3px rgb(4, 4, 141, 0.5) solid; border-radius: 5px;" required>
+                </div>
+                <div class="grupoFormAdmin2">
+                    <label for="descripcion" style="color:rgb(194, 6, 6)">Descripción:</label>
+                    <textarea id="descripcion" name="descripcion" rows="4" style="height: 100px;  border: 3px rgb(4, 4, 141, 0.5) solid; border-radius: 5px;" required></textarea>
+                </div>
+                <div class="grupoFormAdmin3">
+                    <label for="precio" style="color:rgb(194, 6, 6)">Precio:</label>
+                    <input type="number" id="precio" name="precio" step="1" style="height: 100px;  border: 3px rgb(4, 4, 141, 0.5) solid; border-radius: 5px;" required>
+                </div>
+                <div class="grupoFormAdmin4">
+                    <label for="tipo" style="color:rgb(194, 6, 6)">Tipo:</label>
+                    <select id="tipo" name="tipo" style="height: 40px; border: 3px rgb(4, 4, 141, 0.5) solid; border-radius: 5px;" required>
+                        <option value="bebida">Bebida</option>
+                        <option value="postre">Postre</option>
+                        <option value="plato_principal">Plato Principal</option>
+                    </select>
+                </div>
+                <div class="grupoFormAdmin5">
+                    <label for="mandar" style="color:rgb(194, 6, 6)">Agregar / Modificar:</label>
+                    <input type="submit" id="mandar" name="mandar" value="✔" style="height: 40px; color:green; font-size: 25px; border: 3px rgb(4, 4, 141, 0.5) solid; border-radius: 5px; ">
+                </div>
+            </form>
+        </div>
+    </div>
+    <br><br>
+
+    <div class="espaciador"></div>
+
+    <div class="solo-fondo-2"></div>
+
+    <br><br>
+
+    <script src="../../js/traerAMensajes.js"></script>
+    <script src="../../js/traerACarta.js"></script>
+    <script src="../../js/traerAReservas.js"></script>
+
+</body>
+
+</html>

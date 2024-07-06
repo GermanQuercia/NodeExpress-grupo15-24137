@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Tenor+Sans&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="../img/contrasena.png" type="image/x-icon">
+
+    <title>Iniciar sesión - Inter Comidas</title>
+</head>
+
+<body>
+
+    <div id="inicio-container">
+        <a href="http://localhost:3000/" id="link-al-menu">
+            <div id="menu">INICIO</div>
+        </a>
+    </div>
+
+    <br>
+
+    <div class="solo-fondo"></div>
+    <div class="espaciador"></div>
+
+    <div style="display: flex; align-items: center; flex-direction: column;">
+        <h2>Iniciar sesión</h2>
+        <div class="form-container contenedor-form-login">
+            <form id="form_de_login" style="justify-content: space-evenly; height: 250px;">
+                <div class="form-group">
+                    <label for="username">Usuario:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Iniciar Sesión</button>
+                </div>
+            </form>
+        </div>
+        <div id="respuestaServidor" style="color:red; position: relative;top:-50px; background-color: rgb(255, 224, 157);" >&nbsp;</div>
+    </div>
+
+    <div>usuario1 123 - usuario2 456</div>
+    <br><br>
+
+    <div class="espaciador"></div>
+
+    <div class="solo-fondo-2"></div>
+
+    <br><br>
+
+    <script src="../js/login.js"></script>
+
+</body>
+
+</html>

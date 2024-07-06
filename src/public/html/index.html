@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Tenor+Sans&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="../img/cocinar.png" type="image/x-icon">
+
+    <title>Inter Comidas</title>
+</head>
+
+<body>
+    <header class="header">
+        <a id="inicio"></a>
+        <nav class="nav">
+            <div>
+                <ul>
+                    <li> <a href="#inicio">INICIO</a> </li>
+                    <li> <a href="#reservas" class="res">RESERVAS</a></li>
+                    <li> <a href="#ubicacion" class="res">UBICACIÓN</a></li>
+                    <li> <a href="#contacto" class="res">CONTACTO</a></li>
+                </ul>
+            </div>
+
+            <div class="login">
+                <a href="http://localhost:3000/login">
+                    <img id="imgLogin" src="../img/usuario.png" alt="">
+                    &nbsp;&nbsp;Login
+                </a>
+                <button id="cerrar_menu" onclick="cerrar()">✖</button>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <button id="boton_menu" onclick="abrir()">☰</button>
+    </div>
+    <main>
+
+        <div id="menu-container">
+            <a href="http://localhost:3000/menu" id="link-al-menu">
+                <div id="menu">MENÚ</div>
+            </a>
+        </div>
+
+
+        <div class="logo_y_nombre">
+            <img src="../img/logo.png" alt="">
+            <h1>Inter Comidas</h1>
+            <p>Descubre la gastronomia internacional, de la mano de los mejores chefs.</p>
+        </div>
+        <!--mas arriba para que quede bien--><a id="reservas"></a>
+
+
+        <section id="seccion-principal">
+
+            <div id="seccion-uno" class="div-principal imagen">
+                <div class="image-container">
+                    <img src="../img/imagen_1.webp" alt="imagen 1">
+                </div>
+            </div>
+
+            <div id="seccion-dos" class="div-principal imagen">
+                <div class="image-container">
+                    <img src="../img/imagen_2.jpg" alt="Imagen 2">
+                </div>
+            </div>
+
+            <div id="seccion-tres" class="div-principal">
+                <div class="form-container">
+                    <h2>Reservas</h2>
+                    <form id="formulario1">
+                        <div class="form-group">
+                            <label for="nombre">Nombre:<span style="color:rgb(194, 6, 6)">&nbsp;*</span></label>
+                            <input type="text" id="nombre" name="nombre">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fecha">Fecha:<span style="color:rgb(194, 6, 6)">&nbsp;*</span></label>
+                            <input type="date" id="fecha" name="fecha">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="horario">&nbsp;&nbsp;&nbsp;Horario:<span
+                                    style="color:rgb(194, 6, 6)">&nbsp;*</span></label>
+                            <select id="horario" name="horario">
+                                <option value="">&nbsp;</option>
+                                <option value="19:00">19:00</option>
+                                <option value="19:30">19:30</option>
+                                <option value="20:00">20:00</option>
+                                <option value="20:30">20:30</option>
+                                <option value="21:00">21:00</option>
+                                <option value="21:30">21:30</option>
+                                <option value="22:00">22:00</option>
+                                <option value="22:30">22:30</option>
+                                <option value="23:00">23:00</option>
+                            </select>
+                        </div>
+
+                        <div style="display:flex; flex-direction: row;">
+                            <div class="form-group">
+                                <label for="personas">Personas:<span style="color:rgb(194, 6, 6)">&nbsp;*</span></label>
+                                <select id="personas" name="personas" style="width: 40px !important;">
+                                    <option value="">&nbsp;</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 o más</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group" style="margin-left: 15px;">
+                                <label for="mesa">Mesa nº:<span style="color:rgb(194, 6, 6)">&nbsp;*</span></label>
+                                <select id="mesa" name="mesa" style="width: 40px !important;">
+                                    <option value="">&nbsp;</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comentarios">Comentarios:</label>
+                            <textarea id="comentarios" name="comentarios" rows="1"></textarea>
+                        </div>
+
+                        <!--mas arriba para que quede bien--><a id="ubicacion"></a>
+
+                        <button type="submit">Reservar ✔</button>
+                        <div id="respuesta1"></div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="seccion-cuatro" class="div-principal">
+                <div class="form-container">
+                    <h2>Visítanos en:</h2>
+                    <p>Av. Cabildo 3200 </p>
+                    <p>Ciudad Autónoma de Buenos Aires</p>
+                    <p>CP 1429</p>
+                    <p>Argentina</p>
+                    <p>Teléfono: 000000</p>
+                    <p>WhatsApp: 111111</p>
+                </div>
+            </div>
+
+            <div id="seccion-cinco" class="div-principal">
+                <!--<iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.0268562324936!2d-58.4653203!3d-34.5528754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb682dda080b7%3A0x5467664e274a1d00!2sAv.%20Cabildo%203200%2C%20C1429AAP%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1714190882643!5m2!1ses!2sar"
+                    width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+            </div>
+
+            <!--<div id="seccion-seis class="div-principal">6</div>-->
+
+            <div id="seccion-siete" class="div-principal imagen">
+                <div class="image-container">
+                    <img src="../img/imagen_3.webp" alt="Imagen 3">
+                </div>
+            </div>
+
+            <div id="seccion-ocho" class="div-principal">
+                <!--mas arriba para que quede bien--><a id="contacto"></a>
+                <div class="form-container">
+                    <h2>Contacto</h2>
+                    <form id="formulario2">
+                        <div class="form-group">
+                            <label for="nombre2">Nombre:<span style="color:rgb(194, 6, 6)">&nbsp;*</span></label>
+                            <input type="text" id="nombre2" name="nombre2">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eMail:<span
+                                    style="color:rgb(194, 6, 6)">&nbsp;*</span></label>
+                            <input type="email" id="email" name="email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje:<span style="color:rgb(194, 6, 6)">&nbsp;*</span></label>
+                            <textarea id="mensaje" name="mensaje" rows="6"></textarea>
+                        </div>
+
+                        <button type="submit">Deja tu mensaje ✔</button>
+                        <div id="respuesta2"></div>
+                    </form>
+
+                </div>
+            </div>
+
+            <div id="seccion-nueve" class="div-principal imagen">
+                <div class="image-container">
+                    <img src="../img/imagen_4.jpeg" alt="Imagen 4">
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/" target="_blank"><img src="../img/facebook.png" alt="Facebook"></a>
+            <a href="https://twitter.com/" target="_blank"><img src="../img/twitter.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="../img/instagram.png" alt="Instagram"></a>
+        </div>
+        <div class="copyright">
+            &copy; 2024 Inter Comidas | Todos los derechos reservados
+        </div>
+    </footer>
+
+    <script src="../js/hamb.js"></script>
+
+</body>
+
+</html>

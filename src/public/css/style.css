@@ -1,0 +1,773 @@
+* {
+    /*border: 1px dotted gray;*/
+    list-style: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
+    background-size: 100px 100px;
+    background-color: rgb(255, 202, 87);
+}
+
+.nav {
+    width: 99%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: -0.9375rem;
+    position: fixed;
+    z-index: 2;
+    height: 0px;
+}
+
+.nav div,
+.nav ul {
+    display: flex;
+    gap: 2%;
+}
+
+.nav li {
+    display: flex;
+    padding-top: 8px;
+    border-radius: 0.1875rem;
+    align-items: center;
+    justify-content: center;
+    height: 1.875rem;
+}
+
+.nav a {
+    display: flex;
+    background-color: white;
+    color: rgb(4, 4, 141);
+    opacity: 0.75;
+    align-items: center;
+    justify-content: center;
+    padding: 0.0625rem 0.9375rem;
+    border-radius: 0.3125rem;
+    min-height: 1.875rem;
+    z-index: 10;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    opacity: 1;
+    transition: 0.5s;
+    color: rgb(21, 21, 183);
+}
+
+.login {
+    margin-right: 2%;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 22px;
+    height: 0px;
+}
+
+.nav img {
+    width: 1.5625rem;
+    align-self: center;
+    background-color: white;
+}
+
+.logo_y_nombre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../IMG/fondo-vintage-dibujado-mano-comida-rapida_124507-1321.jpg');
+    background-repeat: repeat;
+    text-align: center;
+    height: 400px;
+    position: relative;
+}
+
+.logo_y_nombre::before {
+    content: '';
+    background-image: url("../IMG/guarda.png");
+    background-size: 154px 32px;
+    position: absolute;
+    height: 32px;
+    top: -30px;
+    left: 0.5%;
+    right: 0.5%;
+}
+
+.logo_y_nombre::after {
+    content: '';
+    background-image: url("../IMG/guarda.png");
+    background-size: 154px 32px;
+    position: absolute;
+    height: 32px;
+    top: 400px;
+    left: 0.5%;
+    right: 0.5%;
+}
+
+.logo_y_nombre h1 {
+    text-align: center;
+    font-size: 3.125rem;
+    position: relative;
+    letter-spacing: 0.4375rem;
+    word-spacing: 0.625rem;
+    top: -40px;
+    background-color: transparent;
+    cursor: default;
+    color: rgb(194, 6, 6);
+    transition: 0.5s;
+    text-shadow: 0px 0px 0.8rem rgb(255, 255, 255);
+}
+
+.logo_y_nombre h1:hover {
+    text-shadow: 1px 1px 2px rgb(237, 174, 174);
+    transition: 0.3s;
+    scale: 1.02;
+}
+
+.txt{
+    color:rgb(194, 6, 6);
+    text-align: center;
+}
+
+.logo_y_nombre p {
+    text-align: center;
+    position: relative;
+    color: rgb(4, 4, 141);
+    top: -90px;
+    cursor: default;
+    letter-spacing: -0.0625rem;
+    font-family: "Alice", serif;
+    font-weight: light;
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.23);
+    padding: 3px;
+    border-radius: 5px;
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+
+#menu-container {
+    position: sticky;
+    top: 35%;
+    left: 5%;
+    z-index: 2;
+    width: fit-content;
+}
+
+#menu {
+    width: 6.25rem;
+    height: 6.25rem;
+    line-height: 6.25rem;
+    background-color: rgb(194, 6, 6);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0.8;
+}
+
+#menu:hover {
+    opacity: 1;
+    transition: 0.2s;
+    scale: 1.03;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 0.625rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: auto;
+}
+
+#boton_menu {
+    display: none;
+    position: sticky;
+    /*visibility: hidden;*/
+    cursor: pointer;
+    margin: 0% 5%;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    opacity: 0.8;
+    transition: 0.2s;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 50%;
+    border: 0px;
+}
+
+#boton_menu:hover {
+    opacity: 1;
+    transition: 0.2s;
+}
+
+#cerrar_menu {
+    position: sticky;
+    align-self: end;
+    visibility: hidden;
+    cursor: pointer;
+    margin: 65px 0%;
+    width: 80px;
+    height: 80px;
+    background-color: rgb(194, 6, 6);
+    opacity: 0.8;
+    transition: 0.2s;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 50%;
+    color: white;
+    border: 0px;
+}
+
+#cerrar_menu:hover {
+    opacity: 1;
+    transition: 0.2s;
+
+}
+
+h2 {
+    color: rgb(4, 4, 141);
+    text-align: center;
+}
+
+table {
+    color: rgb(4, 4, 141);
+    width: 100%;
+}
+
+td {
+    padding: 15px 50px;
+}
+
+td:first-child {
+    text-align: right;
+}
+
+tr {
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+th {
+    padding: 2%;
+    color: rgb(194, 6, 6);
+    font-family: "Alice", serif;
+    font-size: 22px;
+}
+
+th:first-child {
+    text-align: right;
+}
+
+th:last-child {
+    text-align: left;
+}
+
+.espaciador {
+    height: 32px;
+    background-image: url("../IMG/guarda.png");
+    background-size: 154px 32px;
+}
+
+#inicio-container {
+    position: sticky;
+    top: 1.5%;
+    left: 5%;
+    z-index: 2;
+    width: fit-content;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.redes-sociales {
+    margin-bottom: 10px;
+}
+
+.redes-sociales a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.redes-sociales img {
+    width: 35px;
+    height: 35px;
+}
+
+.solo-fondo {
+    display: block;
+    position: absolute;
+    height: 125px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-image: url(../IMG/fondo-vintage-dibujado-mano-comida-rapida_124507-1321.jpg);
+    overflow: hidden;
+    background-repeat: repeat-x;
+}
+
+.solo-fondo-2 {
+    display: block;
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    left: 0;
+    z-index: 0;
+    background-image: url(../IMG/fondo-vintage-dibujado-mano-comida-rapida_124507-1321.jpg);
+    overflow: hidden;
+    background-repeat: repeat-x;
+}
+
+#seccion-principal {
+    display: grid;
+    gap: 15px;
+    margin: 50px 5%;
+    grid-template-areas: 'uno dos tres'
+        'cuatro cinco cinco'
+        'siete ocho nueve'
+    ;
+    grid-template-columns: 31% 31% 31%;
+}
+
+.div-principal {
+    border-radius: 8px;
+    text-align: center;
+    padding: 2%;
+    height: 400px;
+    gap: 5px
+}
+
+#seccion-uno {
+    grid-area: uno;
+}
+
+#seccion-dos {
+    grid-area: dos;
+}
+
+#seccion-tres {
+    grid-area: tres;
+    background-color: rgb(255, 255, 255, 0.5);
+    border: 2px rgb(194, 6, 6) solid;
+    transition: 0.2s;
+}
+
+#seccion-tres:hover {
+    background-color: rgb(255, 255, 255, 0.3);
+    transition: 0.2s;
+}
+
+#seccion-cuatro {
+    background-color: rgb(255, 255, 255, 0.5);
+    border: 2px rgb(194, 6, 6) solid;
+    height: 96%;
+    grid-area: cuatro;
+    transition: 0.2s;
+}
+
+#seccion-cuatro:hover {
+    background-color: rgb(255, 255, 255, 0.3);
+    transition: 0.2s;
+}
+
+
+#seccion-cinco {
+    grid-area: cinco;
+}
+
+#seccion-seis {
+    grid-area: seis;
+}
+
+#seccion-siete {
+    grid-area: siete;
+}
+
+#seccion-ocho {
+    background-color: rgb(255, 255, 255, 0.5);
+    border: 2px rgb(194, 6, 6) solid;
+    grid-area: ocho;
+    transition: 0.2s;
+}
+
+#seccion-ocho:hover {
+    background-color: rgb(255, 255, 255, 0.3);
+    transition: 0.2s;
+}
+
+
+#seccion-nueve {
+    grid-area: nueve;
+}
+
+
+/*form*/
+.form-container {
+    width: 100%;
+    color: rgb(4, 4, 141);
+    padding: 2px;
+
+}
+
+.form-container h2 {
+    font-family: "Alice", serif;
+    font-size: 25px;
+    font-weight: 900;
+    color: rgb(194, 6, 6);
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 3%;
+}
+
+.form-group label {
+    margin-right: 10px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    color: rgb(4, 4, 141);
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    /* min-width: 100px; */
+    resize: none;
+    overflow-y: scroll;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-container button {
+    font-family: "Alice", serif;
+    font-size: larger;
+    padding: 10px;
+    background-color: transparent;
+    border: 2px transparent solid;
+    color: rgb(194, 6, 6);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+
+    border: 2px rgb(194, 6, 6) solid;
+}
+
+.contenedor-form-login {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 360px;
+    background-color: rgb(255, 224, 157);
+    width: 60%;
+    box-shadow: #333 0px 0px 15px;
+    border-radius: 8px;
+}
+
+
+#seccion-cinco {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 0px;
+    border: 0;
+    overflow: hidden;
+}
+
+#seccion-cinco .iframe {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
+/*imagen*/
+.imagen {
+    position: relative;
+    width: 96%;
+    height: 96%;
+    overflow: hidden;
+}
+
+.imagen img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    opacity: 0.7;
+    transition: 0.5s;
+    box-shadow: inset 0px 0px 55px rgb(255, 202, 87);
+}
+
+.imagen:hover img {
+    scale: 1.02;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+/* formulario */
+#respuesta1 {
+    font-size: 12px;
+    color: rgb(194, 6, 6);
+}
+
+#respuesta2 {
+    font-size: 12px;
+    color: rgb(194, 6, 6);
+}
+
+.filtros {
+    display: inline-flex;
+    justify-content: center;
+    color: rgb(194, 6, 6);
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+
+.boton {
+    background-color: transparent;
+    color: rgb(4, 4, 141);
+    border: 2px solid transparent;
+    cursor: pointer;
+    margin: 0px 3px;
+    border-radius: 4px;
+}
+
+.boton.activo {
+    background-color: transparent;
+    color: rgb(194, 6, 6);
+    border: 2px solid rgb(194, 6, 6);
+    ;
+    cursor: pointer;
+    margin: 0px 3px;
+    border-radius: 4px;
+}
+
+.postre {
+    background-color: rgb(255, 0, 0, 0.1);
+}
+
+.plato_principal {
+    background-color: rgb(9, 255, 0, 0.1);
+}
+
+.bebida {
+    background-color: rgb(0, 0, 255, 0.1);
+}
+
+.contendor-de-carta {
+    padding: 0px 10%;
+}
+
+
+@media screen and (max-width: 57rem) {
+    .nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        padding: 8px;
+    }
+
+    nav a {
+        width: 110px;
+        box-shadow: 0px 0px 5px rgb(16, 16, 16);
+    }
+
+    nav a:hover {
+        box-shadow: 0px 0px 5px #333;
+    }
+
+    .login {
+        margin-right: 2%;
+        align-items: flex-start;
+        padding: 22px;
+    }
+
+    td,
+    th {
+        padding: 2%;
+    }
+
+    th:nth-child(2),
+    td:nth-child(2) {
+        display: none;
+    }
+
+    #seccion-principal {
+        margin: 50px 2%;
+        grid-template-areas: 'uno tres'
+            'cuatro dos'
+            'cinco cinco'
+            'siete ocho'
+            'nueve nueve'
+        ;
+        grid-template-columns: 50% 50%;
+    }
+
+    #seccion-nueve {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 35rem) {
+    .nav {
+        display: none;
+    }
+
+    .logo_y_nombre {
+        height: 470px;
+    }
+
+    .logo_y_nombre::after {
+        top: 468px;
+    }
+
+    #boton_menu {
+        display: block;
+        position: fixed;
+        z-index: 2;
+        box-shadow: 0px 0px 5px #333;
+    }
+
+    #boton_menu.abierto {
+        display: none;
+    }
+
+    nav.abierto {
+        display: flex;
+        height: 0px;
+    }
+
+    .login {
+        height: fit-content;
+    }
+
+    #cerrar_menu.abierto {
+        visibility: visible;
+        box-shadow: 0px 0px 5px #333;
+    }
+
+    td,
+    th {
+        padding: 2% 0%;
+    }
+
+    th:nth-child(2),
+    td:nth-child(2) {
+        display: none;
+    }
+
+    #seccion-principal {
+        margin: 50px 2%;
+        grid-template-areas: 'uno''dos'
+            'tres''cuatro'
+            'cinco''seis'
+            'siete''ocho'
+            'nueve'
+        ;
+        grid-template-columns: 100%;
+    }
+
+    #seccion-nueve,
+    #seccion-dos,
+    #seccion-siete,
+    #seccion-uno {
+        display: none;
+    }
+}
+
+.botonesAdmin{
+    background-color: rgb(255, 255, 255,0.2);
+    width: 10rem;
+    height: 120px;
+    border-radius: 8px;
+    border: 3px solid rgb(12, 23, 141);
+    display: inline-flex;
+    flex-direction: column;
+    margin: 5px;
+    align-items: center;
+    text-align: center;
+    color:rgb(12, 23, 141);
+    cursor: pointer;
+    transition: 300ms;
+    font-family: "Alice", serif;
+    font-size: 20px;
+}
+
+.botonesAdmin:hover{
+    background-color: rgb(255, 255, 255,0.5);
+    transition: 300ms;
+
+}
+
+.botonesAdmin img{
+    width: 70px;
+    height: auto;
+    transition: 300ms;
+}
+
+.botonesAdmin img:hover{
+    scale: 1.1;
+}
+
+.grupoFormAdmin1{
+    display: flex;
+    flex-direction: column;
+    width: 17%;
+    padding: 0px 1px;
+}
+.grupoFormAdmin2{
+    display: flex;
+    flex-direction: column;
+    width: 28%;
+    padding: 0px 1px;
+}
+.grupoFormAdmin3{
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+    padding: 0px 1px;
+}
+.grupoFormAdmin4{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding: 0px 1px;
+}
+.grupoFormAdmin5{
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+    padding: 0px 1px;
+}
