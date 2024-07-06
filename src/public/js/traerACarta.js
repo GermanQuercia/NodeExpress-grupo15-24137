@@ -25,7 +25,7 @@ function mostrarCarta() {
     async function paraResultado2() {
         let contenido;
         try {
-            const response = await fetch(`http://localhost:3000/admin/carta`);
+            const response = await fetch(`https://nodeexpress-grupo15-24137.onrender.com/admin/carta`);
             //console.log(response);
             contenido = await response.json();
             //console.log(contenido[0].nombre)
@@ -59,7 +59,7 @@ async function agregarDesdeForm(e) {
     const stringConDatos = JSON.stringify(formDataObj);
     //console.log(stringConDatos);
     try {
-        const response = await fetch(`http://localhost:3000/admin/carta/agregarUnoNuevo?${stringConDatos}`,
+        const response = await fetch(`https://nodeexpress-grupo15-24137.onrender.com/admin/carta/agregarUnoNuevo?${stringConDatos}`,
             {
                 method: 'POST',
                 headers: {
@@ -89,7 +89,7 @@ async function agregarDesdeForm(e) {
 async function borrarCarta(id) {
     try {
         //console.log(id)
-        const res = await fetch(`http://localhost:3000/admin/borrarCarta/${id}`, {
+        const res = await fetch(`https://nodeexpress-grupo15-24137.onrender.com/admin/borrarCarta/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -133,7 +133,7 @@ async function modificarCartaContinuacion(e) {
     const stringConDatos = JSON.stringify(formDataObj);
     //console.log(stringConDatos);
     try {
-        const response = await fetch(`http://localhost:3000/admin/carta/modificarUno?${stringConDatos}`,
+        const response = await fetch(`https://nodeexpress-grupo15-24137.onrender.com/admin/carta/modificarUno?${stringConDatos}`,
             {
                 method: 'PUT',
                 headers: {

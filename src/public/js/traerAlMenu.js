@@ -26,7 +26,7 @@ params.forEach((value, key) => {
 async function ejecutar() {
     const mostrar = document.querySelector("tbody");
     try {
-        const response = await fetch(`http://localhost:3000/menuListado?${query}`);
+        const response = await fetch(`https://nodeexpress-grupo15-24137.onrender.com/menuListado?${query}`);
         console.log(response);
         if (!response.ok) {
             throw new Error('Pintura "Gamo" y laca del mismo nombre');

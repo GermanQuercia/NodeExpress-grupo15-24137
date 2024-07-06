@@ -27,7 +27,7 @@ function mostrarReservas() {
     async function paraResultado2() {
         let contenido;
         try {
-            const response = await fetch(`http://localhost:3000/admin/reservas`);
+            const response = await fetch(`https://nodeexpress-grupo15-24137.onrender.com/admin/reservas`);
             //console.log(response);
             contenido = await response.json();
             //console.log(contenido[0].nombre)
@@ -59,7 +59,7 @@ function mostrarReservas() {
 async function borrarReser(id) {
     try {
         //console.log(id)
-        const res = await fetch(`http://localhost:3000/admin/borrarReserva/${id}`, {
+        const res = await fetch(`https://nodeexpress-grupo15-24137.onrender.com/admin/borrarReserva/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

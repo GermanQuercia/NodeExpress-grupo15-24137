@@ -79,7 +79,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('../IMG/fondo-vintage-dibujado-mano-comida-rapida_124507-1321.jpg');
+    background-image: url('../img/fondo-vintage-dibujado-mano-comida-rapida_124507-1321.jpg');
     background-repeat: repeat;
     text-align: center;
     height: 400px;
@@ -88,7 +88,7 @@ nav a:hover {
 
 .logo_y_nombre::before {
     content: '';
-    background-image: url("../IMG/guarda.png");
+    background-image: url("../img/guarda.png");
     background-size: 154px 32px;
     position: absolute;
     height: 32px;
@@ -99,7 +99,7 @@ nav a:hover {
 
 .logo_y_nombre::after {
     content: '';
-    background-image: url("../IMG/guarda.png");
+    background-image: url("../img/guarda.png");
     background-size: 154px 32px;
     position: absolute;
     height: 32px;
@@ -275,7 +275,7 @@ th:last-child {
 
 .espaciador {
     height: 32px;
-    background-image: url("../IMG/guarda.png");
+    background-image: url("../img/guarda.png");
     background-size: 154px 32px;
 }
 
@@ -316,7 +316,7 @@ footer {
     top: 0;
     left: 0;
     z-index: 0;
-    background-image: url(../IMG/fondo-vintage-dibujado-mano-comida-rapida_124507-1321.jpg);
+    background-image: url(../img/fondo-vintage-dibujado-mano-comida-rapida_124507-1321.jpg);
     overflow: hidden;
     background-repeat: repeat-x;
 }
@@ -328,7 +328,7 @@ footer {
     width: 100%;
     left: 0;
     z-index: 0;
-    background-image: url(../IMG/fondo-vintage-dibujado-mano-comida-rapida_124507-1321.jpg);
+    background-image: url(../img/fondo-vintage-dibujado-mano-comida-rapida_124507-1321.jpg);
     overflow: hidden;
     background-repeat: repeat-x;
 }

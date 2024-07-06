@@ -6,7 +6,7 @@ document.getElementById("form_de_login").addEventListener("submit", async (e) =>
 
     //console.log(user, password)
 
-    const resultado = await fetch("http://localhost:3000/login", {
+    const resultado = await fetch("https://nodeexpress-grupo15-24137.onrender.com/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -27,6 +27,6 @@ document.getElementById("form_de_login").addEventListener("submit", async (e) =>
     }
     if (resJson.status === "ok") {
         //console.log("aca esta el redirect y no lo hace:");
-        window.location.href = "http://localhost:3000/admin";
+        window.location.href = "https://nodeexpress-grupo15-24137.onrender.com/admin";
     }
 })

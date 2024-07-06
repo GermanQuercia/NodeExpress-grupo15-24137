@@ -23,7 +23,7 @@ function mostrarMensajes() {
     async function paraResultado2() {
         let contenido;
         try {
-            const response = await fetch(`http://localhost:3000/admin/mensajes`);
+            const response = await fetch(`https://nodeexpress-grupo15-24137.onrender.com/admin/mensajes`);
             //console.log(response);
             contenido = await response.json();
             console.log(contenido)
@@ -51,7 +51,7 @@ function mostrarMensajes() {
 async function borrarMens(id) {
     try {
         //console.log(id)
-        const res = await fetch(`http://localhost:3000/admin/borrarMensaje/${id}`, {
+        const res = await fetch(`https://nodeexpress-grupo15-24137.onrender.com/admin/borrarMensaje/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

@@ -55,7 +55,7 @@ function validar1() {
   };
 
   // Enviar los datos mediante una solicitud AJAX
-  fetch("http://localhost:3000/reserva", {
+  fetch("https://nodeexpress-grupo15-24137.onrender.com/reserva", {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -109,7 +109,7 @@ function validar2() {
   };
 
   // Enviar los datos mediante una solicitud AJAX
-  fetch("http://localhost:3000/contacto", {
+  fetch("https://nodeexpress-grupo15-24137.onrender.com/contacto", {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
